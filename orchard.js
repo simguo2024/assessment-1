@@ -36,6 +36,7 @@ const pinkAcres = [1, 5, 4, 2, 1, 5, 4]
 let totalAcres = 0;
 let acresLen = fujiAcres.length - 1;
 
+// Comment: Using a for loop, to go over all the arces array in every loop, and then calculate the total number of acres picked for the entire week.
 for (let i = acresLen; i >= 0; i--) {
     totalAcres += fujiAcres[acresLen] + galaAcres[acresLen] + pinkAcres[acresLen];
     acresLen--;
@@ -56,10 +57,10 @@ console.log(totalAcres)
 
 // CODE HERE
 const totalDays = 7;
+
+// Comment: calculate averageDailyAcres use totalAcres / totalDays
 let averageDailyAcres = totalAcres / totalDays;
 console.log(averageDailyAcres)
-
-
 
 
 // PROBLEM 3
@@ -88,7 +89,11 @@ let acresLeft = 174
 let days = 0
 
 // CODE HERE
+
+// Comment: this might be the more efficient math formular
 // console.log(acresLeft / averageDailyAcres)
+
+// Comment: inside the while loop, reduce the acresLeft, and exit the loop while acresLeft = 0
 while (acresLeft > 0) {
     days += 1;
     acresLeft -= averageDailyAcres;
@@ -121,6 +126,7 @@ let pinkTons = [];
 let produce = 6.5;
 let arcesLen = fujiAcres.length - 1;
 
+// Comment: use one loop to go over all the array and do the calculation, and update the fujiTons,galaTons,pinkTons at the same time
 for (let i = 0; i < arcesLen; i++) {
     fujiTons[i] = fujiAcres[i] * produce;
     galaTons[i] = galaAcres[i] * produce;
@@ -149,7 +155,7 @@ let fujiWeight = 0;
 let galaWeight = 0;
 let pinkWeight = 0;
 
-// Use for loop to alculate total pounds for Fuji variety, Gala variety, Pink variety
+// Comment:Use for loop to alculate total pounds for Fuji variety, Gala variety, Pink variety
 for (let i = 0; i < fujiTons.length; i++) {
     fujiWeight += fujiTons[i] * 2000;
     galaWeight += galaTons[i] * 2000;
@@ -175,6 +181,8 @@ const galaPrice = .64
 const pinkPrice = .55
 
 // CODE HERE
+// Comment: the prices are written in cents, but I converted to dollar.
+
 let fujiProfit = fujiWeight * fujiPrice/100;
 let galaProfit = galaWeight * galaPrice/100;
 let pinkProfit = pinkWeight * pinkPrice/100;
