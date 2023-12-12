@@ -127,7 +127,7 @@ let produce = 6.5;
 let arcesLen = fujiAcres.length - 1;
 
 // Comment: use one loop to go over all the array and do the calculation, and update the fujiTons,galaTons,pinkTons at the same time
-for (let i = 0; i < arcesLen; i++) {
+for (let i = 0; i < fujiAcres.length; i++) {
     fujiTons[i] = fujiAcres[i] * produce;
     galaTons[i] = galaAcres[i] * produce;
     pinkTons[i] = pinkAcres[i] * produce;
